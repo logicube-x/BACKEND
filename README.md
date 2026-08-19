@@ -1,2 +1,1 @@
-# BACKEND
-Backend server and API for the project, handling application logic, data management, authentication, and communication with the frontend.
+A day-by-day journey of learning backend development, covering Node.js, Express.js, APIs, databases, authentication, and real-world backend projects.
