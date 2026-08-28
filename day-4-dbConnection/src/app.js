@@ -1,26 +1,12 @@
-const express=require("express");
-const mongoose=require("mongoose")
+const express=require('express')
+const connectDb=require('./config/db')
 
-const app=(express())
+const app=express();
 
-const dbConnect= async()=>{
-  try{
-    await mongoose.connect(
-      "mongodb+srv://arshaminmay2006_db_user:Arsh%4012345@cohort-cluster.fwykjhh.mongodb.net/",
-    );
-    console.log("mongodb connected");
-  }
-  catch(error){
-    console.log("error while connecting to bd",error);
-  }
-}
+connectDb()
 
-
-dbConnect();
-
-
-app.get("/",(req,res)=>{
-    res.send('done ')
+app.get('/',(req,res)=>{
+    res.send("i am here")
 })
 
 module.exports=app;
