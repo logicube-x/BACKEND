@@ -2,6 +2,7 @@ const express=require("express");
 
 const app=express();
 
+app.use(express.json());
 
 app.get('/products',(req,res)=>{
     res.send([
@@ -223,10 +224,19 @@ app.get('/home',(req,res)=>{
     res.send("yoyo home here")
 })
 
+app.post('/create',(req,res)=>{
+
+
+    console.log(req.body);
+    res.send("Ok post")
+})
+
 app.listen(3000,()=>{
-    console.log("server is running on port");
+    console.log("server is running on port...");
 })
 
 
 // This is just a temp comment to maintain streaks , today im too tired just finished the exams 
+
+
 
